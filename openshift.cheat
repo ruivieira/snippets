@@ -1,0 +1,43 @@
+% openshift
+
+# Login to a cluster (default port)
+oc login -u <user> -p <password> <url>:6443
+
+# Create a project
+oc new-project <project>
+
+# Delete a project
+oc delete project <project>
+
+# Add admin rights to service account
+oc adm policy add-role-to-user admin -z <account>
+
+# Deploy CRD from YAML file
+oc create -f <crd_file>
+
+# List pods
+oc get pods
+
+# List pods in a specific namespace
+oc get pods -n <namespace>
+
+# Create new app from container image
+oc new-app <container>
+
+# Allow to run containers as root
+oc adm policy add-scc-to-user anyuid -z default
+
+# Get a secret in a namespace as json
+oc get secrets -n <namespace> <secret-name> -o json
+
+# Delete all resource associated with an app
+oc delete all --selector app=<app-name>
+
+# Get cluster information
+oc describe node
+
+# Get information about an image stream
+oc describe is/<imagestream>
+
+# Delete an image stream
+oc delete is/<imagestream>

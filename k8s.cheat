@@ -1,0 +1,22 @@
+% k8s, kind
+
+# create a kind k8s cluster
+kind create cluster
+
+# create a kind k8s cluster named <name>
+kind create cluster --name <name>
+
+# list kind k8s clusters
+kind get clusters
+
+# get information on cluster <name>
+kubectl cluster-info --context <name>
+
+# delete the kind k8s default cluster
+kind delete cluster
+
+# delete the kind k8s cluster named <name>
+kind delete cluster --name <name>
+
+# load custom docker image into kind k8s
+kind load docker-image <custom-image>
