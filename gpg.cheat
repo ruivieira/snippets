@@ -1,0 +1,4 @@
+% gpg
+
+# Decrypt file using default key
+gpg -d <file>.gpg > <file>
