@@ -1,0 +1,4 @@
+% git
+
+# Git clone single branch, single depth
+git clone -b <branch> --depth 1 --single-branch <repo>
